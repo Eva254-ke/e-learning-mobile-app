@@ -8,13 +8,25 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'SmartLearn',
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/images/logo.jpg',
+              height: 40,
+              width: 40,
+              fit: BoxFit.cover,
+            ),
+            SizedBox(width: 10),
+            Text(
+              'SmartLearn',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ],
         ),
         centerTitle: true,
         flexibleSpace: Container(
@@ -240,4 +252,4 @@ class ExploreCoursesScreen extends StatelessWidget {
       ),
     );
   }
-} 
+}
