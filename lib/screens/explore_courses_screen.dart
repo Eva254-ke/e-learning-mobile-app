@@ -450,3 +450,18 @@ class CourseDetailScreen extends StatelessWidget {
     );
   }
 }
+
+Future<void> launchUrl(Uri url) async {
+  // ignore: deprecated_member_use
+  if (await canLaunch(url.toString())) {
+    // ignore: deprecated_member_use
+    await launch(url.toString());
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+Future<bool> canLaunchUrl(Uri url) async {
+  // ignore: deprecated_member_use
+  return canLaunch(url.toString());
+}
