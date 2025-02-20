@@ -88,3 +88,4 @@ class ProgressScreen extends StatelessWidget {
 
 ## License
 SmartLearn © 2025. All rights reserved. SmartLearn is a trademarked by Eva254-ke. SmartLearn is licensed under the MIT License. You may not use SmartLearn for any commercial purpose without obtaining a license from Eva254-ke. SmartLearn is not intended for use in any environment where it may be used to harm or deceive others. SmartLearn is not intended for use in any environment where it may beProprietary software.
+

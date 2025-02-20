@@ -23,33 +23,18 @@ dependencies:
   firebase_core: ^2.24.0 # Updated to the latest stable version
   firebase_auth: ^4.11.0 # Updated to the latest stable version
   cloud_firestore: ^4.16.0 # Updated to the latest stable version
+  flutter_secure_storage: ^9.2.4 # Corrected version constraint for compatibility
+  url_launcher: ^6.3.1
 
 # Development dependencies
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0 # For linting and code quality
+  flutter_driver:
+    sdk: flutter
+  flutter_launcher_icons: ^0.10.0 # Added for custom launcher icons
 
 # Flutter-specific configuration
 flutter:
   uses-material-design: true
-
-  # Assets
-  assets:
-    - assets/images/ # Folder containing images
-    # - assets/fonts/OpenSans-Regular.ttf (removed because the file doesn't exist)
-    # - assets/fonts/OpenSans-Bold.ttf
-    # - assets/fonts/OpenSans-Italic.ttf (removed because the file doesn't exist)
-
-  # Custom fonts
-  fonts:
-    - family: OpenSans
-      fonts:
-        - asset: assets/fonts/OpenSans-Regular.ttf
-        - asset: assets/fonts/OpenSans-Bold.ttf
-          weight: 700
-    - family: Roboto
-      fonts:
-        - asset: assets/fonts/Roboto-Regular.ttf
-        - asset: assets/fonts/Roboto-Italic.ttf
-          style: italic
