@@ -1,11 +1,12 @@
-import 'package:elearning_app/presentation/screens/home_screen.dart' as presentation;
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
-import 'screens/explore_courses_screen.dart';
-import 'screens/progress_tracking_screen.dart';
+import 'package:elearning_app/presentation/screens/home_screen.dart' as presentation;
+import 'package:elearning_app/presentation/screens/explore_courses_screen.dart';
+import 'package:elearning_app/presentation/screens/register_screen.dart';
+import 'package:elearning_app/presentation/screens/login_screen.dart';
+import 'package:elearning_app/presentation/screens/progress_tracking_screen.dart'; // Ensure this path is correct
 
 void main() {
-  runApp(ElearningApp());
+  runApp(const ElearningApp());
 }
 
 class ElearningApp extends StatefulWidget {
@@ -18,8 +19,8 @@ class ElearningApp extends StatefulWidget {
 class ElearningAppState extends State<ElearningApp> {
   int _currentIndex = 0;
   final List<Widget> _screens = [
-    presentation.HomeScreen(),
-    ExploreCoursesScreen(),
+    const presentation.HomeScreen(),
+    const ExploreCoursesScreen(),
     ProgressTrackingScreen(),
   ];
 
@@ -28,12 +29,12 @@ class ElearningAppState extends State<ElearningApp> {
     return MaterialApp(
       title: 'E-Learning App',
       theme: ThemeData(
-        primaryColor: Color(0xFF1E88E5),
+        primaryColor: const Color(0xFF1E88E5),
         colorScheme: ColorScheme.light(
           secondary: Colors.blueAccent,
         ),
         fontFamily: 'Roboto',
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
           color: Colors.white,
           iconTheme: IconThemeData(color: Colors.black),
           titleTextStyle: TextStyle(
@@ -48,9 +49,9 @@ class ElearningAppState extends State<ElearningApp> {
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentIndex,
           onTap: (index) => setState(() => _currentIndex = index),
-          selectedItemColor: Color(0xFF1E88E5),
+          selectedItemColor: const Color(0xFF1E88E5),
           unselectedItemColor: Colors.grey,
-          items: [
+          items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
               label: 'Home',
@@ -65,22 +66,6 @@ class ElearningAppState extends State<ElearningApp> {
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class ProgressTrackingScreen extends StatelessWidget {
-  const ProgressTrackingScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Progress Tracking'),
-      ),
-      body: Center(
-        child: Text('Progress Tracking Screen'),
       ),
     );
   }

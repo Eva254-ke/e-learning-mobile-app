@@ -100,17 +100,4 @@ class ProgressScreen extends StatelessWidget {
 SmartLearn © 2025. All rights reserved. SmartLearn is a trademarked by Eva254-ke. SmartLearn is licensed under the MIT License. You may not use SmartLearn for any commercial purpose without obtaining a license from Eva254-ke. SmartLearn is not intended for use in any environment where it may be used to harm or deceive others. SmartLearn is not intended for use in any environment where it may be Proprietary software.
 ```
 
-### Steps to Use This File:
-1. Copy the content above.
-2. Create a new file named `README.md` in your project's root directory.
-3. Paste the content into the file.
-4. Save the file.
 
-### Additional Steps:
-- Ensure the logo file (`logo.jpg`) is placed in the `assets/images/` directory.
-- Update the `pubspec.yaml` file to include the logo in the `assets` section:
-```yaml
-flutter:
-  assets:
-    - assets/images/logo.jpg
-```
