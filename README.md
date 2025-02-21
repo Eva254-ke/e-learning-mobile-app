@@ -1,4 +1,4 @@
-# SmartLearn - Mobile Learning Platform
+## SmartLearn - Mobile Learning Platform
 
 ![SmartLearn Logo](assets/images/logo.jpg)
 
@@ -18,7 +18,7 @@ A Flutter-based mobile application for online learning and course progress track
 git clone https://github.com/Eva254-ke/e-learning-mobile-app.git
 cd elearning_app
 
-### Install Dependencies
+## Install Dependencies
 Run the following command to install the required dependencies:
 
 ```bash
@@ -39,9 +39,9 @@ flutter run -d <device_id>
 
 ---
 
-# License
+## License
 
-**SmartLearn © 2025. All rights reserved.**
+## SmartLearn © 2025. All rights reserved.
 
 - **SmartLearn** is a trademarked by **Eva254-ke**.
 - **SmartLearn** is licensed under the **MIT License**.
