@@ -24,7 +24,7 @@ class ElearningAppState extends State<ElearningApp> {
   int _currentIndex = 0;
   final List<Widget> _screens = [
     const presentation.HomeScreen(),
-    const ExploreCoursesScreen(),
+    ExploreCoursesScreen(),
     ProgressTrackingScreen(),
   ];
 

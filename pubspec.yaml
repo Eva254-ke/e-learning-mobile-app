@@ -26,6 +26,7 @@ dependencies:
   flutter_secure_storage: ^9.2.4
   url_launcher: ^6.3.1
   firebase_storage: ^11.6.5
+  font_awesome_flutter: ^10.8.0
 
 # Development dependencies
 dev_dependencies:
