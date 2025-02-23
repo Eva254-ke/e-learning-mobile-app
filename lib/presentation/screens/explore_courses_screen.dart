@@ -1,37 +1,53 @@
 import 'package:flutter/material.dart';
+import 'course_video_screen.dart'; // Import the new video player screen
 
 class ExploreCoursesScreen extends StatelessWidget {
-  // Dummy list of software engineering courses
+  // Dummy list of software engineering courses with additional features
   final List<Map<String, dynamic>> courses = [
     {
       'title': 'Introduction to Programming',
       'description': 'Learn the basics of programming with Python.',
       'price': '\$49.99',
-      'videoUrl': 'https://www.youtube.com/watch?v=bJzb-RuUcMU', // Placeholder URL
+      'videoUrl': 'https://www.youtube.com/watch?v=bJzb-RuUcMU',
+      'enrolledStudents': 1200,
+      'rating': 4.7,
+      'duration': '6 hours',
     },
     {
       'title': 'Data Structures and Algorithms',
       'description': 'Master the fundamentals of data structures and algorithms.',
       'price': '\$79.99',
-      'videoUrl': 'https://www.youtube.com/watch?v=iZmDcfTtcNg', // Placeholder URL
+      'videoUrl': 'https://www.youtube.com/watch?v=iZmDcfTtcNg',
+      'enrolledStudents': 2500,
+      'rating': 4.8,
+      'duration': '10 hours',
     },
     {
       'title': 'Web Development Bootcamp',
       'description': 'Build modern web applications with HTML, CSS, and JavaScript.',
       'price': '\$99.99',
-      'videoUrl': 'https://www.youtube.com/watch?v=FazgJVnrVuI', // Placeholder URL
+      'videoUrl': 'https://www.youtube.com/watch?v=FazgJVnrVuI',
+      'enrolledStudents': 3500,
+      'rating': 4.9,
+      'duration': '15 hours',
     },
     {
       'title': 'Mobile App Development with Flutter',
       'description': 'Create cross-platform mobile apps using Flutter and Dart.',
       'price': '\$129.99',
-      'videoUrl': 'https://www.youtube.com/watch?v=I9ceqw5Ny-4&list=PLSzsOkUDsvdtl3Pw48-R8lcK2oYkk40cm', // Placeholder URL
+      'videoUrl': 'https://www.youtube.com/watch?v=I9ceqw5Ny-4&list=PLSzsOkUDsvdtl3Pw48-R8lcK2oYkk40cm',
+      'enrolledStudents': 1800,
+      'rating': 4.6,
+      'duration': '12 hours',
     },
     {
       'title': 'Machine Learning Fundamentals',
       'description': 'Explore the basics of machine learning and AI.',
       'price': '\$149.99',
-      'videoUrl': 'https://www.youtube.com/watch?v=ukzFI9rgwfU', // Placeholder URL
+      'videoUrl': 'https://www.youtube.com/watch?v=ukzFI9rgwfU',
+      'enrolledStudents': 3000,
+      'rating': 4.5,
+      'duration': '8 hours',
     },
   ];
 
@@ -75,6 +91,17 @@ class ExploreCoursesScreen extends StatelessWidget {
                       color: Colors.grey[600],
                     ),
                   ),
+                  const SizedBox(height: 12),
+                  // Additional course details
+                  Row(
+                    children: [
+                      _buildCourseDetail(Icons.people, '${course['enrolledStudents']} Students'),
+                      const SizedBox(width: 16),
+                      _buildCourseDetail(Icons.star, '${course['rating']}'),
+                      const SizedBox(width: 16),
+                      _buildCourseDetail(Icons.timer, course['duration']),
+                    ],
+                  ),
                   const SizedBox(height: 16),
                   Row(
                     children: [
@@ -89,10 +116,14 @@ class ExploreCoursesScreen extends StatelessWidget {
                       const Spacer(),
                       ElevatedButton(
                         onPressed: () {
-                          // Navigate to a video player screen (placeholder)
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text('Playing: ${course['title']}'),
+                          // Navigate to the CourseVideoScreen
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => CourseVideoScreen(
+                                videoUrl: course['videoUrl'],
+                                courseTitle: course['title'],
+                              ),
                             ),
                           );
                         },
@@ -136,6 +167,23 @@ class ExploreCoursesScreen extends StatelessWidget {
           );
         },
       ),
+    );
+  }
+
+  // Helper method to build course details
+  Widget _buildCourseDetail(IconData icon, String text) {
+    return Row(
+      children: [
+        Icon(icon, size: 16, color: Colors.grey),
+        const SizedBox(width: 4),
+        Text(
+          text,
+          style: TextStyle(
+            fontSize: 14,
+            color: Colors.grey[700],
+          ),
+        ),
+      ],
     );
   }
 }

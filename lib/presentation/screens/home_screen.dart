@@ -183,12 +183,12 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(height: 15),
                 TextButton(
                   onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ExploreCoursesScreen(),
-                    ),
-                  );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ExploreCoursesScreen(),
+                      ),
+                    );
                   },
                   child: Text(
                     'Continue as Guest',
