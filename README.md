@@ -23,7 +23,20 @@ Run the following command to install the required dependencies:
 
 ```bash
 flutter pub get
-##Running the app
+
+## Install FlutterFire CLI
+Run the following command to install the FlutterFire CLI:
+
+```bash
+dart pub global activate flutterfire_cli
+
+## Configure Firebase
+Run the following command to configure Firebase:
+
+```bash
+flutterfire configure
+
+## Running the app
 Run the following command to start the app on an emulator or physical device:
 
 ```bash

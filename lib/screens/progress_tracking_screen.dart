@@ -5,14 +5,14 @@ class ProgressScreen extends StatelessWidget {
   final Map<String, double> courseProgress; // Simulate progress data
 
   const ProgressScreen({
-    Key? key, // Use Key? instead of super.key
+    super.key, // Use Key? instead of super.key
     this.isLoggedIn = false, // Default to false for demonstration
     this.courseProgress = const {
       'Flutter Basics': 0.3,
       'Advanced Dart': 0.7,
       'State Management': 0.5,
     },
-  }) : super(key: key); // Call super constructor
+  }); // Call super constructor
 
   @override
   Widget build(BuildContext context) {

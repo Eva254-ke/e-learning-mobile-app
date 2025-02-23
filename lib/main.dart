@@ -4,6 +4,10 @@ import 'package:elearning_app/presentation/screens/explore_courses_screen.dart';
 import 'package:elearning_app/presentation/screens/register_screen.dart';
 import 'package:elearning_app/presentation/screens/login_screen.dart';
 import 'package:elearning_app/presentation/screens/progress_tracking_screen.dart'; // Ensure this path is correct
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'package:firebase_storage/firebase_storage.dart';
+
 
 void main() {
   runApp(const ElearningApp());
